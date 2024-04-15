@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
+    <title>Document</title>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <link rel="stylesheet" href="homepage.css">
+    <link rel="stylesheet" href="contacts.css">
+   
+</head>
+<body>
+  <header>
+    <div id="top_rwanda">
+        <form action="backend.php" method="POST">
+          <input type="text" title="field" size="24" maxlength="30" id="district" />
+        </form>
+      <div id="temperature_container">
+          <button id="toggleButton" type="submit"><b>Celsius</b></button>
+          <p id="temperatureDisplay"></p>
+      </div>
+      <div id="vertical-line"></div>
+        <hr class="vertical-line" />
+        <a href="">
+          <span id="today_and_tomorrow">
+            <span id="today">today</span>
+            <span id="tomorrow">tomorrow</span>
+          </span>
+        </a>
+        <div id="second_temperature">
+        </div>
+        <p id="feels_like">Feels like</p>
+        <div id="the_fills_like_temperature_container"></div>
+        <span id="clear">
+          <b><p>clear</p></b>
+          <p>high</p>
+          <p>low</p>
+        </span>
+        <div id="sun_rise">
+          <div class="semicircle"></div>
+          <img src="./CLIMATE/bx-down-arrow-alt.svg" alt="" id="arrow" />
+          <img src="./CLIMATE/bx-down-arrow-alt.svg" alt="" id="second_arrow" />
+          <hr id="line1" />
+        </div>
+        <ion-icon name="moon-outline" id="moon"></ion-icon>
+        <img src="images/sunset.png" alt="" id="sun" />
+      </div>
+      <hr id="hr" /> 
+</header>
+<main>
+   <div class="moving-border">
+ 
+ <p id="text">
+       " Clean air and water, and a livable climate are inalienable 
+        human rights. And solving this crisis is not a question of 
+        politics. It is our moral obligation -if, admittedly, a 
+        daunting one."
+      </p>
+       </div>
+       <img src="images/cartoon1.png" alt="nelson saly" id="cartoon1">
+   
+  <div class="box2"><i><h1>contacts</h1></i>
+    
+    <span>
+    <b><ion-icon name="call-outline" id="call"></ion-icon>Phone:250788763827/250786405446<br></b>
+    <b><ion-icon name="logo-whatsapp" id="Whatsapp"></ion-icon>Whatsapp/Message:250798963223 <br></b>
+    <i><b><ion-icon name="mail-outline" id="Email"></ion-icon>Email:wmcrwanda@gmail.com</b></i>
+    </span>
+  </div>
+</main>
+<footer>
+  <div id="footer">
+        <a href="#"><i>
+            <ul>
+              <li>Help</li>
+              <li>WMC</li>
+              <li>rcaproject</li>
+            </ul>
+            <div id="the_middle_list_in_footer">
+              <div>temperature measurements</div>
+              <div>weather station data</div>
+              <div>seasons</div>
+            </div>
+            <div id="ol">
+              <ol>
+                <li id="privacy">Privacy&nbsp;policy</li>
+                <li id="about">about&nbsp;us</li>
+                <li id="job">job</li>
+              </ol>
+            </div>
+            </i>
+        </a>
+        <div id="partners">
+          <img src="images/meteoo.jpg" alt="saly" />
+          <img src="images/cloud.png" alt="saly" id="AI" />
+          <img src="images/rca.png" alt="saly" id="rca" />
+        </div>
+      </div>
+</footer>
+     <div class="ticker-container">
+      <div class="ticker-content">
+        <p>
+          <b>WMC</b>(weather station data, Meteological prediction and climate change studies)you can find here all information realated to meteology, weather and climate
+        </p>
+      </div>
+    </div>
+   <script src="homepage.js"></script>
+</body>
+</html>

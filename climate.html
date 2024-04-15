@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="homepage.css" />
+    <title>WMC</title>
+    <link rel="icon" type="image/png" href="cloud.png" />
+    <style>
+      header {
+        background-color: rgb(98, 202, 236);
+        width: 100%;
+        height: 13rem;
+      }
+      p {
+        font-size: 20px;
+      }
+      #number1 {
+        float: right;
+        clear: right;
+      }
+      #next {
+        width: 100%;
+      }
+      #next1 {
+        float: right;
+        clear: right;
+      }
+      #lastImage {
+        width: 100%;
+      }
+      .active {
+        background-color: rgb(98, 202, 236);
+        margin-left: 100px;
+        padding-top: 15px;
+        padding-bottom: 100px;
+        padding-left: 10px;
+        height: 4em;
+        width: 0.7rem;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="top_black">
+      <a href="#" title="menu"><i class="bx bx-menu" id="menu"></i></a>
+      <a href="homepage.html" id="home">Home</a>
+      <a href="#" title="WMC" id="wmc">WMC</a>
+      <a class="active" aria-current="page" href="climate.html" id="climate"><h3 id="climate_word">climate</h3></a>
+      <a
+        href="https://www.bing.com/search?pglt=171&q=weather+images+and+videos&cvid=b17841ce0ea4421490064eb2ce79ba66&gs_lcrp=EgZjaHJvbWUyBggAEEUYOTIGCAEQABhAMgYIAhAuGEAyBggDEAAYQDIGCAQQLhhAMgYIBRAAGEAyBggGEAAYQDIGCAcQABhAMgYICBAAGEDSAQg2NTI1ajBqMagCALACAA&FORM=ANNTA1&PC=U531"
+        target="_blank"
+        rel="noopener"
+        ><h3 id="weather_word">weather</h3></a
+      >
+      <a href="contacts.html" target="_blank" title="contacts"><h3 id="sign_up">Contacts</h3></a>
+      <a
+        href="https://www.google.com/maps/dir/''/''/@37.0625,-95.677068,4z/data=!3m1!4b1?entry=ttu"
+        target="_blank"
+        rel="noopener"
+        ><h3 id="log_in">MAPS</h3></a
+      >
+    </div>
+    <header>
+      <div id="top_rwanda">
+        <form action="backend.php" method="POST">
+          <input type="text" placeholder="enter your district" size="24" maxlength="30" id="district" />
+        </form>
+        <div id="temperature_container">
+          <button id="toggleButton" type="submit"><b>Celsius</b></button>
+          <p id="temperatureDisplay"></p>
+        </div>
+        <div id="vertical-line"></div>
+        <hr class="vertical-line" />
+        <a href="">
+          <span id="today_and_tomorrow">
+            <span id="today">today</span>
+            <span id="tomorrow">tomorrow</span>
+          </span>
+        </a>
+        <div id="second_temperature">
+        </div>
+        <p id="feels_like">Feels like</p>
+        <div id="the_fills_like_temperature_container">250&deg;C</div>
+        <span id="clear">
+          <b>
+            <p>clear</p>
+          </b>
+          <p>high</p>
+          <p>low</p>
+        </span>
+        <div id="sun_rise">
+          <div class="semicircle"></div>
+          <img src="./CLIMATE/bx-down-arrow-alt.svg" alt="" id="arrow" />
+          <img src="./CLIMATE/bx-down-arrow-alt.svg" alt="" id="second_arrow" />
+          <hr id="line1" />
+        </div>
+        <ion-icon name="moon-outline" id="moon"></ion-icon>
+        <img src="images/sunset.png" alt="" id="sun" />
+      </div>
+      <hr id="hr" />
+    </header>
+    <main>
+      <div>
+        <img src="images/images.jfif" alt="" id="number1" />
+
+        <p>
+          Weather station data plays a crucial role in monitoring and understanding weather patterns and trends. These
+          stations are equipped with various sensors that collect data on temperature, humidity, air pressure, wind
+          speed, and precipitation. The data gathered from weather stations is essential for meteorologists,
+          researchers, and policymakers to a nalyze and predict weather conditions accurately. By studying historical
+          weather data collected by these stations, scientists can identify long-term climate trends and patterns,
+          helping us better prepa re for extreme weather events and climate change.
+        </p>
+        <img src="images/next.jpg" alt="irasubiza saly nelson" id="next" />
+        <p>
+          Weather station data is collected at regular intervals and transmitted to central databases for ana lysis and
+          dissemination. Advanced technology and automated systems have made it easier to c ollect real-time data from
+          weather stations located worldwide. This data is used not only for weather forecast ing but also for climate
+          research, agriculture, aviation, and disaster management. Weather station networks provide valuable insights
+          into local and global weather patterns, helping us make informed decisions and take appropriate actions to
+          mitig ate the impacts of severe weather conditions.
+        </p>
+        <img src="images/next1.jpg" alt="" />
+        <p>
+          Weather station data is not only valuable for meteorological purposes but also for vari ous industries and
+          sectors. Agriculture relies on weather data for crop management, irrig ation planning, and pest control.
+          Energy companies use weather information to optimize energy prod uction and distribution. Transportation
+          sectors depend on accurate weather forecasts to ens ure safe travel and efficient logistics. By leveraging the
+          data collected from weather stations, bus inesses and organizations can make informed decisions to enhance
+          efficiency, reduce risks, and improve overall operations.
+        </p>
+        <p>
+          The advancement of technology has revolutionized weather monitoring and data collection. Modern weather
+          stations are equipped with state-of-the-a rt instruments, satellite communication systems, and remote sensing
+          capabilities. These advancements have enabled us to gather more precise and detailed weather info rmation,
+          leading to improved forecasting accuracy and early warning systems for severe weather events. As we continue
+          to innovate and upgrade weather station technologies, we enhance our ability to understand and adapt to the
+          dynamic nature of the Earth's atmosphere, ultimately contributing to a safer and more resilient society.
+        </p>
+        <img src="images/next2.jpg" alt="" id="lastImage" /><br /><br /><br /><br />
+      </div>
+    </main>
+    <footer>
+      <div id="footer">
+        <a href="#"
+          ><i>
+            <ul>
+              <li>Help</li>
+              <li>WMC</li>
+              <li>rcaproject</li>
+            </ul>
+            <div id="the_middle_list_in_footer">
+              <div>temperature measurements</div>
+              <div>weather station data</div>
+              <div>seasons</div>
+            </div>
+            <script>
+              $(document).ready(function () {
+                $("#the_middle_list_in_footer").mouseover(function () {
+                  $(this).slideUp(5000).slideDown(5000).fadeIn();
+                });
+              });
+            </script>
+            <div id="ol">
+              <ol>
+                <li id="privacy">Privacy&nbsp;policy</li>
+                <li id="about">about&nbsp;us</li>
+                <li id="job">job</li>
+              </ol>
+              <script>
+                $(document).ready(function () {
+                  $("#ol").mouseover(function () {
+                    $(this).fadeIn("100");
+                  });
+                });
+              </script>
+            </div></i
+          >
+        </a>
+        <div id="partners">
+          <img src="images/meteoo.jpg" alt="" id="fott" />
+          <img src="images/cloud.png" alt="" id="AI" />
+          <img src="images/rca.png" alt="" id="rca" />
+        </div>
+        <script>
+          $(document).ready(function () {
+            $("#partners").mouseover(function () {
+              $(this).slideUp(90000).slideDown(90000);
+            });
+          });
+        </script>
+        <script>
+          $(document).ready(function () {
+            $("#AI").mouseover(function () {
+              $(this).fadeOut(90000).fadeIn(90000);
+            });
+          });
+        </script>
+      </div>
+    </footer>
+    <script src="backend.js"></script>
+    <script src="homepage.js"></script>
+
+    <script>
+      const apiKey = "ad3abf73d1d197c2d8377bc03ec668d6";
+      const Musanze = "Musanze";
+      const Kigali = "Kigali";
+      const Gisenyi = "Gisenyi";
+      const Rwamagana = "Rwamagana";
+      const Muhanga = "Muhanga";
+      const Nyabihu = "Mukamira";
+      const Huye = "huye";
+      const Nyamata = "Nyamata";
+      fetch(`https://api.openweathermap.org/data/2.5/weather?q=${Musanze}&appid=${apiKey}`)
+        .then((response) => response.json())
+        .then((data) => {
+          const weather = data.weather[0].main;
+          const temp = Math.round(data.main.temp - 273.15); // Convert Kelvin to Celsius
+
+          document.getElementById("weather").innerHTML = `
+         <h2>Weather in ${Musanze}</h2>
+          <p>Current conditions: ${weather}</p>
+         <p>Temperature: ${temp}°C</p>
+        `;
+        })
+        .catch((error) => {
+          console.error(error);
+          document.getElementById("weather").innerHTML = "Error fetching weather data";
+        });
+
+      fetch(`https://api.openweathermap.org/data/2.5/weather?q=${Kigali}&appid=${apiKey}`)
+        .then((response) => response.json())
+        .then((data) => {
+          const weather = data.weather[0].main;
+          const temp = Math.round(data.main.temp - 273.15); // Convert Kelvin to Celsius
+
+          document.getElementById("gasabo").innerHTML = `
+         <h2>Weather in ${Kigali}</h2>
+          <p>Current conditions: ${weather}</p>
+         <p>Temperature: ${temp}°C</p>
+        `;
+        })
+        .catch((error) => {
+          console.error(error);
+          document.getElementById("gasabo").innerHTML = "Error fetching weather data";
+        });
+
+      fetch(`https://api.openweathermap.org/data/2.5/weather?q=${Gisenyi}&appid=${apiKey}`)
+        .then((response) => response.json())
+        .then((data) => {
+          const weather = data.weather[0].main;
+          const temp = Math.round(data.main.temp - 273.15); // Convert Kelvin to Celsius
+
+          document.getElementById("rubavu").innerHTML = `
+         <h2>Weather in ${Gisenyi}</h2>
+          <p>Current conditions: ${weather}</p>
+         <p>Temperature: ${temp}°C</p>
+        `;
+        })
+        .catch((error) => {
+          console.error(error);
+          document.getElementById("rubavu").innerHTML = "Error fetching weather data";
+        });
+
+      fetch(`https://api.openweathermap.org/data/2.5/weather?q=${Rwamagana}&appid=${apiKey}`)
+        .then((response) => response.json())
+        .then((data) => {
+          const weather = data.weather[0].main;
+          const temp = Math.round(data.main.temp - 273.15); // Convert Kelvin to Celsius
+          document.getElementById("rwamagana").innerHTML = `
+         <h2>Weather in ${Rwamagana}</h2>
+          <p>Current conditions: ${weather}</p>
+         <p>Temperature: ${temp}°C</p>
+        `;
+        })
+        .catch((error) => {
+          console.error(error);
+          document.getElementById("rwamagana").innerHTML = "Error fetching weather data";
+        });
+
+      fetch(`https://api.openweathermap.org/data/2.5/weather?q=${Muhanga}&appid=${apiKey}`)
+        .then((response) => response.json())
+        .then((data) => {
+          const weather = data.weather[0].main;
+          const temp = Math.round(data.main.temp - 273.15); // Convert Kelvin to Celsius
+
+          document.getElementById("muhanga").innerHTML = `
+         <h2>Weather in ${Muhanga}</h2>
+          <p>Current conditions: ${weather}</p>
+         <p>Temperature: ${temp}°C</p>
+        `;
+        })
+        .catch((error) => {
+          console.error(error);
+          document.getElementById("muhanga").innerHTML = "Error fetching weather data";
+        });
+
+      fetch(`https://api.openweathermap.org/data/2.5/weather?q=${Nyabihu}&appid=${apiKey}`)
+        .then((response) => response.json())
+        .then((data) => {
+          const weather = data.weather[0].main;
+          const temp = Math.round(data.main.temp - 273.15); // Convert Kelvin to Celsius
+
+          document.getElementById("nyabihu").innerHTML = `
+         <h2>Weather in ${Nyabihu}</h2>
+          <p>Current conditions: ${weather}</p>
+         <p>Temperature: ${temp}°C</p>
+        `;
+        })
+        .catch((error) => {
+          console.error(error);
+          document.getElementById("nyabihu").innerHTML = "Error fetching weather data";
+        });
+
+      fetch(`https://api.openweathermap.org/data/2.5/weather?q=${Ngororero}&appid=${apiKey}`)
+        .then((response) => response.json())
+        .then((data) => {
+          const weather = data.weather[0].main;
+          const temp = Math.round(data.main.temp - 273.15); // Convert Kelvin to Celsius
+
+          document.getElementById("ngororero").innerHTML = `
+         <h2>Weather in ${Ngororero}</h2>
+          <p>Current conditions: ${weather}</p>
+         <p>Temperature: ${temp}°C</p>
+        `;
+        })
+        .catch((error) => {
+          console.error(error);
+          document.getElementById("ngororero").innerHTML = "Error fetching weather data";
+        });
+
+      fetch(`https://api.openweathermap.org/data/2.5/weather?q=${Huye}&appid=${apiKey}`)
+        .then((response) => response.json())
+        .then((data) => {
+          const weather = data.weather[0].main;
+          const temp = Math.round(data.main.temp - 273.15); // Convert Kelvin to Celsius
+
+          document.getElementById("huye").innerHTML = `
+         <h2>Weather in ${Huye}</h2>
+          <p>Current conditions: ${weather}</p>
+         <p>Temperature: ${temp}°C</p>
+        `;
+        })
+        .catch((error) => {
+          console.error(error);
+          document.getElementById("huye").innerHTML = "Error fetching weather data";
+        });
+
+      fetch(`https://api.openweathermap.org/data/2.5/weather?q=${Nyamata}&appid=${apiKey}`)
+        .then((response) => response.json())
+        .then((data) => {
+          const weather = data.weather[0].main;
+          const temp = Math.round(data.main.temp - 273.15); // Convert Kelvin to Celsius
+
+          document.getElementById("bugesera").innerHTML = `
+         <h2>Weather in ${Nyamata}</h2>
+          <p>Current conditions: ${weather}</p>
+         <p>Temperature: ${temp}°C</p>
+        `;
+        })
+        .catch((error) => {
+          console.error(error);
+          document.getElementById("bugesera").innerHTML = "Error fetching weather data";
+        });
+    </script>
+    <div class="ticker-container">
+      <div class="ticker-content">
+        <p>
+          <b>Rwanda:</b>Rwanda is one of the most affected country by climate change on the African continent • FRANCE
+          24
+        </p>
+      </div>
+    </div>
+    <script>
+      $(document).ready(function () {
+        var currentIndex = 0;
+        var images = $("#slideshow img");
+        var totalImages = images.length;
+        function showImage(index) {
+          images.eq(index).fadeIn(1000).siblings().fadeOut(9000);
+        }
+
+        function nextImage() {
+          showImage(currentIndex);
+          currentIndex = (currentIndex + 1) % totalImages;
+        }
+      });
+    </script>
+    <script>
+      document.getElementById("menu").addEventListener("mouseenter", function () {
+        var displaying = document.getElementById("display");
+        if (displaying.style.display === "none") {
+          displaying.style.display = "block";
+        } else {
+          displaying.style.display = "none";
+        }
+      });
+    </script>
+  </body>
+</html>

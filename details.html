@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <meta charset="UTF-8" />
+    <!-- <link rel="stylesheet" href="https://kit.fontawesome.com/your-kit-id.css" crossorigin="anonymous" /> -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="jquery.js"></script>
+   <link rel="stylesheet" href="details.css">
+  </head>
+
+  <body>
+    <input type="search" id="search" placeholder="type here your email account" size="76.9" />
+    <div class="container"></div>
+    <table id="dataTable">
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>First Name</th>
+          <th>Last Name</th>
+          <th>Email</th>
+          <th>Password</th>
+          <th>Phone number</th>
+          <th>country</th>
+          <th>province</th>
+          <th>district</th>
+          <th>city</th>
+          <th><button type="button" id="delete">DELETE</button></th>
+        </tr>
+      </thead>
+      <tbody></tbody>
+    </table>
+    <div id="pagination"></div>
+    <div id="confirmation" class="modal">
+      <div class="modal-content">
+        <p>Are you sure you want to delete?</p>
+        <button type="button" id="confirm-delete">Confirm</button>
+        <button type="button" id="cancel-delete">Cancel</button>
+      </div>
+    </div>
+    <div id="noresultsFound"></div>
+    <script>
+      const paginationDiv = document.getElementById("pagination");
+      let currentPage = 1;
+      const rowsPerPage = 5;
+
+      $.ajax({
+        url: "jquery.php",
+        method: "GET",
+        success: (data) => {
+          displayTableData(data);
+          const totalPages = Math.ceil(data.length / rowsPerPage);
+          displayPagination(totalPages);
+        },
+      });
+      $(document).ready(function () {
+        $("#search").on("input", function () {
+          var searchText = $(this).val().toLowerCase();
+          var noResults = true;
+          $("#dataTable tr:not(:first)").each(function () {
+            var text = $(this).text().toLowerCase();
+            var found = text.includes(searchText);
+            $(this).toggle(found);
+            if (found) {
+              $(this).show();
+              noResults = true;
+            } else $(this).hide();
+          });
+        });
+      });
+
+      function displayTableData(data) {
+        const startIndex = (currentPage - 1) * rowsPerPage;
+        const endIndex = startIndex + rowsPerPage;
+        const paginatedData = data.slice(startIndex, endIndex);
+        const tableBody = document.querySelector("tbody");
+        tableBody.innerHTML = ""; 
+        paginatedData.forEach((item) => {
+          const row = document.createElement("tr");
+          row.innerHTML = `
+              <td>${item.id}</td>
+              <td>${item.firstName}</td>
+              <td>${item.lastName}</td>
+              <td>${item.email}</td>
+              <td>${item.password}</td>
+              <td>${item.phoneNumber}</td>
+              <td>${item.country}</td>
+              <td>${item.province}</td>
+              <td>${item.district}</td>
+              <td>${item.city}</td>
+              <td><input type="checkbox" class="deleteCheckbox" data-id="${item.id}"></td>
+          `;
+          tableBody.appendChild(row);
+        });
+      }
+      $("#delete").on("click", () => {
+        deleteRows();
+      });
+      function displayPagination(totalPages) {
+        $.ajax({
+          url: "jquery.php",
+          method: "GET",
+          success: (data) => {
+            paginationDiv.innerHTML = "";
+
+            for (let i = 1; i <= totalPages; i++) {
+              const btn = document.createElement("button");
+              btn.innerText = i;
+              btn.classList.add("pagination-btn");
+              if (i === currentPage) {
+                btn.classList.add("active");
+              }
+              btn.addEventListener("click", function () {
+                currentPage = i;
+                displayTableData(data);
+                displayPagination(totalPages);
+              });
+              paginationDiv.appendChild(btn);
+            }
+          },
+        });
+      }
+    </script>
+    <script>
+      function deleteRows() {
+        if(confirm())
+        $.ajax({
+          url: "jquery.php",
+          type: "GET",
+          success: (tableData) => {
+            const checkboxes = document.querySelectorAll(".deleteCheckbox:checked");
+            checkboxes.forEach((checkbox) => {
+              const id = parseInt(checkbox.getAttribute("data-id"));
+              tableData.splice(
+                tableData.findIndex((item) => item.id === id),
+                1
+              );
+              deleteOneRow(id);
+            });
+            displayTableData(tableData);
+            const totalPages = Math.ceil(tableData.length / rowsPerPage);
+            displayPagination(totalPages);
+          },
+        });
+      }
+
+      function deleteOneRow(id) {
+        $.ajax({
+          url: "jquery.php",
+          type: "DELETE",
+          data: { id },
+        });
+      }
+    </script>
+  </body>
+</html>

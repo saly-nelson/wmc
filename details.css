@@ -1,0 +1,110 @@
+ th,
+ td {
+     border: 1px solid black;
+     width: 300px;
+     height: -11px;
+ }
+
+ tr:nth-child(even) {
+     background-color: rgb(230, 228, 228);
+ }
+
+ tr:nth-child(odd) {
+     background-color: rgb(233, 231, 231);
+ }
+
+ tr:hover {
+     background-color: whitesmoke;
+ }
+
+ #search {
+     margin-left: 20px;
+     border: 1px solid black;
+     height: 30px;
+     position: sticky;
+     left: 20px;
+     top: 0;
+ }
+
+ #editUser {
+     background-color: rgb(9, 229, 9);
+     height: 30%;
+     margin-top: 0px;
+     vertical-align: top;
+     width: 60px;
+     padding: 5px;
+     border-radius: 4px;
+ }
+
+ #deleteUser {
+     background-color: red;
+     height: 30%;
+     margin: 0;
+     width: 60px;
+     padding: 5px;
+ }
+
+ .container {
+     max-width: 800px;
+     margin: 0 auto;
+     padding: 20px;
+ }
+
+ table {
+     width: 100%;
+     border-collapse: collapse;
+     margin-bottom: 20px;
+ }
+
+ table,
+ th,
+ td {
+     border: 1px solid #ddd;
+     padding: 8px;
+     /* height: 1px; */
+ }
+
+ th {
+     background-color: #f2f2f2;
+ }
+
+ #searchInput {
+     padding: 8px;
+     margin-bottom: 10px;
+     width: 100%;
+     box-sizing: border-box;
+ }
+
+ #pagination {
+     margin-top: 20px;
+ }
+
+ .pagination-btn {
+     cursor: pointer;
+     display: inline-block;
+     padding: 8px 16px;
+     background-color: #f2f2f2;
+     border: 1px solid #ddd;
+     margin-right: 5px;
+ }
+
+ .active {
+     background-color: green;
+     color: #fff;
+ }
+
+ .modal {
+     display: none;
+     position: fixed;
+     top: 0;
+     left: 0;
+     width: 100%;
+     height: 100%;
+     background-color: rgba(0, 0, 0, 0.5);
+ }
+
+ .modal-content {
+     background-color: #f0f0f0;
+     padding: 20px;
+     border-radius: 5px;
+ }

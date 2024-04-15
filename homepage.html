@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="homepage.css" />
+    <title>WMC</title>
+    <link rel="icon" type="image/png" href="cloud.png" />
+  </head>
+  <body>
+    <div id="top_black">
+      <a href="#" title="menu"><i class="bx bx-menu" id="menu"></i></a>
+      <a class="active" aria-current="page" href="homepage.html" id="home">Home</a>
+      <a href="#" title="WMC" id="wmc">WMC</a>
+      <a href="climate.html" target="_blank" title="climate"><h3 id="climate_word">climate</h3></a>
+      <a href="https://www.bing.com/search?pglt=171&q=weather+images+and+videos&cvid=b17841ce0ea4421490064eb2ce79ba66&gs_lcrp=EgZjaHJvbWUyBggAEEUYOTIGCAEQABhAMgYIAhAuGEAyBggDEAAYQDIGCAQQLhhAMgYIBRAAGEAyBggGEAAYQDIGCAcQABhAMgYICBAAGEDSAQg2NTI1ajBqMagCALACAA&FORM=ANNTA1&PC=U531"target="_blank"rel="noopener" ><h3 id="weather_word">weather</h3></a >
+      <a href="contacts.html" target="_blank" title="contacts"><h3 id="sign_up">Contacts</h3></a>
+      <a href="https://www.google.com/maps/dir/''/''/@37.0625,-95.677068,4z/data=!3m1!4b1?entry=ttu" target="_blank" rel="noopener"  ><h3 id="log_in">MAPS</h3></a>
+    </div>
+    <header>
+      <div id="top_rwanda">
+   <a href="samuella.html"><input type="button" title="district" size="24"id="district" value="international conditions"/></a> 
+  
+      <div id="temperature_container">
+          <button id="toggleButton" type="submit"><b>Celsius</b></button>
+          <p id="temperatureDisplay"></p>
+      </div>
+      <div id="vertical-line"></div>
+        <hr class="vertical-line" />
+        <a href="">
+          <span id="today_and_tomorrow">
+            <span id="today">today</span>
+            <span id="tomorrow">tomorrow</span>
+          </span>
+        </a>
+        <div id="second_temperature">
+        </div>
+        <p id="feels_like">Feels like</p>
+        <div id="the_fills_like_temperature_container"></div>
+        <span id="clear">
+          <b><p>clear</p></b>
+          <p>high</p>
+          <p>low</p>
+        </span>
+        <div id="sun_rise">
+          <div class="semicircle"></div>
+          <img src="./CLIMATE/bx-down-arrow-alt.svg" alt="" id="arrow" />
+          <img src="./CLIMATE/bx-down-arrow-alt.svg" alt="" id="second_arrow" />
+          <hr id="line1" />
+        </div>
+        <ion-icon name="moon-outline" id="moon"></ion-icon>
+        <img src="images/sunset.png" alt="" id="sun" />
+      </div>
+      <hr id="hr" />
+    </header>
+    <main>
+      <strong id="more_climate_info">
+        <p>more climate info</p>
+      </strong>
+      <div id="locations">
+        <div id="weather"></div>
+        <div id="gasabo"></div>
+        <div id="nyabihu"></div>
+        <div id="rubavu"></div>
+        <div id="huye"></div>
+        <div id="muhanga"></div>
+        <div id="bugesera"></div>
+        <div id="rwamagana"></div>
+      </div>
+     
+    </main>
+    <footer>
+      <div id="footer">
+        <a href="#"><i>
+            <ul>
+              <li>Help</li>
+              <li>WMC</li>
+              <li>rcaproject</li>
+            </ul>
+            <div id="the_middle_list_in_footer">
+              <div>temperature measurements</div>
+              <div>weather station data</div>
+              <div>seasons</div>
+            </div>
+            <div id="ol">
+              <ol>
+                <li id="privacy">Privacy&nbsp;policy</li>
+                <li id="about">about&nbsp;us</li>
+                <li id="job">job</li>
+              </ol>
+            </div>
+            </i>
+        </a>
+        <div id="partners">
+          <img src="images/meteoo.jpg" alt="" />
+          <img src="images/cloud.png" alt="" id="AI" />
+          <img src="images/rca.png" alt="" id="rca" />
+        </div>
+      </div>
+    </footer>
+    <script src="homepage.js"></script>
+     <div class="ticker-container">
+      <div class="ticker-content">
+        <p>
+          <b>WMC</b>(weather station data, Meteological prediction and climate change studies)you can find here all information realated to meteology, weather and climate
+        </p>
+      </div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>WMC</title>
+    <link rel="stylesheet" href="jquery.css" />
+    <link rel="icon" type="image/png" href="favicon.jpg" />
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <link rel="stylesheet" href="jquery.css" />
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Sofia">
+  </head>
+  <body>
+ 
+    <div id="background">
+      <form action="jquery.php" method="post" id="addForm">
+        <h1>WMC</h1>
+        <div id="name">
+            <p id="names">Names</p>
+          <input
+            type="text"
+            title="firstName"
+            id="firstName"
+            name="firstName"
+            size="35"
+            required
+          />
+          <label for="firstName" id="number1">First Name</label>
+          <input
+            type="text"
+            title="lastName"
+            id="lastName"
+            name="lastName"
+            size="35"
+              required
+          />
+          <label for="lastName" id="number2">Last Name</label>
+        </div>
+        <div id="email_password">
+          <label for="email" id="number3">Email</label>
+          <input type="email" title="email" id="email" name="email" size="35" />
+          <label for="password" id="number4">Password</label>
+          <input
+            type="password"
+            title="password"
+            id="password"
+            name="password"
+            size="35"
+              required
+          />
+        </div>
+
+        <div id="number_country">
+          <label for="Phone number" id="number5">Phone number</label>
+          <input
+            type="text"
+            title="phone number"
+            id="phoneNumber"
+            name="phoneNumber"
+            size="35"
+          />
+          <label for="country" id="number6">Country</label>
+          <input
+            type="text"
+            title="country"
+            id="country"
+            name="country"
+            size="35"
+              required
+          />
+        </div>
+
+        <div id="province_district">
+          <label for="province" id="number7">Province</label>
+          <input
+            type="text"
+            title="province"
+            id="province"
+            name="province"
+            size="35"
+              required
+          />
+          <label for="district" id="number8">District</label>
+          <input
+            type="text"
+            title="district"
+            id="district"
+            name="district"
+            size="35"
+              required
+          />
+        </div>
+        <div id="city_submit">
+          <label for="City" id="number9">City</label>
+          <input type="text" title="city" id="city" name="city" size="35" />
+          <button type="submit" id="submit" title="adduser">Submit</button>
+        </div>
+        <a class="view" href="password.html" id="view"
+          ><button title="Account" type="button">ADMIN</button></a
+        >
+        <a href="adminPass.html" id="admin"><button title="admin" type="button">Account</button></a>
+      </form>
+    </div>
+    <script src="jquery.js"></script>
+     <div id="alert"><p>irasubiza saly nelson</p></div>
+  </body>
+  <footer>
+ <ol>
+  <li> <a href="">weather station data</li></a>
+  <li> <a href="">climate change information</li></a>
+  <li> <a href="">meeological predictions</li></a>
+ </ol>
+<p id="footer_name"><a href="">WMC</a></p>
+  </footer>
+</html>
